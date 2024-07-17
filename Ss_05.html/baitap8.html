@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <style>
+      #clock {
+        width: 200px;
+        height: 200px;
+        border: 5px solid black;
+        border-radius: 50%;
+        background: lightgray;
+        position: relative;
+      }
+
+      #clock::before,
+      #clock::after {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: bottom center;
+        transform: translate(50%, 100%);
+        border-radius: 2px;
+      }
+
+      #clock::after {
+        width: 2px;
+        height: 60%;
+        background: red;
+        animation: rotate 60s linear infinite;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: translate(-50%, -100%) rotate(0deg);
+        }
+        to {
+          transform: translate(-50%, -100%) rotate(360deg);
+        }
+      }
+
+      @keyframes rotate-minute {
+        from {
+          transform: translate(-50%, -100%) rotate(0deg);
+        }
+        to {
+          transform: translate(-50%, -100%) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clock"></div>
+  </body>
+</html>

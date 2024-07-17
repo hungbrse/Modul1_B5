@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Radio Buttons</title>
+    <style>
+      /* Ẩn các nút radio gốc */
+      input[type="radio"] {
+        display: none;
+      }
+
+      /* Kiểu cho nhãn radio */
+      .custom-radio {
+        cursor: pointer;
+        display: inline-block;
+      }
+
+      /* Kiểu cho hình ảnh radio không được chọn */
+      .custom-radio img {
+        width: 50px;
+        height: 50px;
+      }
+
+      /* Kiểu cho hình ảnh radio được chọn */
+      input[type="radio"]:checked + .custom-radio img {
+        border: 2px solid blue;
+        /* Bạn có thể thay đổi kiểu cho hình ảnh khi được chọn */
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <label>
+        <input type="radio" name="radio" value="option1" />
+        <span class="custom-radio">
+          <img src="https://via.placeholder.com/50" alt="Option 1" />
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="radio" value="option2" />
+        <span class="custom-radio">
+          <img src="https://via.placeholder.com/50" alt="Option 2" />
+        </span>
+      </label>
+      <label>
+        <input type="radio" name="radio" value="option3" />
+        <span class="custom-radio">
+          <img src="https://via.placeholder.com/50" alt="Option 3" />
+        </span>
+      </label>
+    </form>
+  </body>
+</html>
